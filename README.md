@@ -9,7 +9,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 -->
 
-Integrate the GraphQL Voyager on the PoP API Demo site
+Integrate the [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) on the PoP API Demo site
 
 ## Install
 
