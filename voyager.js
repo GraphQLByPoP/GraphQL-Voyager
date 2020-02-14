@@ -33,11 +33,24 @@ search
       );
     }
   });
-let apiURL = window.location.origin + '/api/graphql/';
-// Copy parameters
+
+/**
+ * We can specify the endpoint through the included script, if it has param "endpoint"
+ * Or default to "/api/graphql/"
+ */
+var getScriptURL = (function() {
+  var scripts = document.getElementsByTagName('script');
+  var index = scripts.length - 1;
+  var myScript = scripts[index];
+  return function() { return myScript.src; };
+})();
+const scriptURL = new URL(getScriptURL());
+const scriptParams = new URLSearchParams(scriptURL.search);
+let apiURL = scriptParams.has('endpoint') ? scriptParams.get('endpoint') : '/api/graphql/';
 if (parameters.use_namespace && strToBool(parameters.use_namespace)) {
   apiURL += '?use_namespace=true';
 }
+
 function introspectionProvider(query) {
   return fetch(apiURL, {
     method: 'post',
