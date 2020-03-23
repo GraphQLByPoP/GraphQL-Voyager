@@ -47,9 +47,16 @@ var getScriptURL = (function() {
 const scriptURL = new URL(getScriptURL());
 const scriptParams = new URLSearchParams(scriptURL.search);
 let apiURL = scriptParams.has('endpoint') ? scriptParams.get('endpoint') : '/api/graphql/';
+let apiURLHasParams = apiURL.indexOf('?') !== -1;
 // Provide "use_namespace" param either through URL or through script source
 if ((parameters.use_namespace && strToBool(parameters.use_namespace)) || (scriptParams.has('use_namespace') && strToBool(scriptParams.get('use_namespace')))) {
-  apiURL += '?use_namespace=true';
+  apiURL += (apiURLHasParams ? '&' : '?') + 'use_namespace=true';
+  apiURLHasParams = true;
+}
+// Provide "versionConstraint" param either through URL or through script source
+if (parameters.versionConstraint || scriptParams.has('versionConstraint')) {
+  apiURL += (apiURLHasParams ? '&' : '?') + 'versionConstraint='+(parameters.versionConstraint || scriptParams.get('versionConstraint'));
+  apiURLHasParams = true;
 }
 
 function introspectionProvider(query) {
