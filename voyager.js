@@ -58,6 +58,11 @@ if (parameters.versionConstraint || scriptParams.has('versionConstraint')) {
   apiURL += (apiURLHasParams ? '&' : '?') + 'versionConstraint='+(parameters.versionConstraint || scriptParams.get('versionConstraint'));
   apiURLHasParams = true;
 }
+// Provide "actions" param either through URL or through script source
+if (parameters.actions || scriptParams.has('actions')) {
+  apiURL += (apiURLHasParams ? '&' : '?') + 'actions='+(parameters.actions || scriptParams.get('actions'));
+  apiURLHasParams = true;
+}
 
 function introspectionProvider(query) {
   return fetch(apiURL, {
