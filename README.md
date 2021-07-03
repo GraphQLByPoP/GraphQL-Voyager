@@ -16,7 +16,7 @@ Integrate the [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) on
 Via Composer
 
 ``` bash
-$ composer require leoloso/pop-graphql-voyager
+$ composer require pop-api-demo-site/pop-graphql-voyager
 ```
 
 In order to copy the GraphQL Voyager client under a specific path, install package [Composer Installers Extender](https://github.com/oomphinc/composer-installers-extender):
