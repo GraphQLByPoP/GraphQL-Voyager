@@ -1,5 +1,5 @@
 {
-    "name": "leoloso/pop-graphql-voyager",
+    "name": "pop-api-demo-site/pop-graphql-voyager",
     "type": "graphql-voyager",
     "description": "Integrate the GraphQL Voyager on the PoP API Demo site",
     "keywords": [
