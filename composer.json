@@ -1,13 +1,13 @@
 {
-    "name": "pop-api-demo-site/pop-graphql-voyager",
+    "name": "graphql-by-pop/graphql-voyager-client",
     "type": "graphql-voyager",
-    "description": "Integrate the GraphQL Voyager on the PoP API Demo site",
+    "description": "GraphQL Voyager client",
     "keywords": [
         "PoP",
         "GraphQL",
         "GraphiQL"
     ],
-    "homepage": "https://github.com/leoloso/PoP-GraphQL-Voyager",
+    "homepage": "https://github.com/GraphQLByPoP/GraphQL-Voyager",
     "license": "MIT",
     "authors": [
         {

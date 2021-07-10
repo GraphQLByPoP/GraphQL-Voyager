@@ -1,4 +1,4 @@
-# PoP GraphQL Voyager
+# GraphQL Voyager
 
 <!--
 [![Latest Version on Packagist][ico-version]][link-packagist]
@@ -9,14 +9,14 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 -->
 
-Integrate the [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) on the PoP API Demo site
+[GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) client, to be integrated with GraphQL by PoP
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require pop-api-demo-site/pop-graphql-voyager
+$ composer require graphql-by-pop/graphql-voyager-client
 ```
 
 In order to copy the GraphQL Voyager client under a specific path, install package [Composer Installers Extender](https://github.com/oomphinc/composer-installers-extender):
@@ -34,7 +34,7 @@ Then, add package type `"graphql-voyager"` in section `"extra.installer-types"`,
         "installer-types": ["graphql-voyager"],
         "installer-paths": {
             "graphql-interactive/": [
-                "leoloso/pop-graphql-voyager"
+                "graphql-by-pop/graphql-voyager-client"
             ]
         }
     }
